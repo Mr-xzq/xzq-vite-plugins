@@ -1,0 +1,61 @@
+{
+  "name": "@xzq/vite-plugin-vue-auto-script-jsx",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "xzq",
+  "description": "auto set script lang='jsx' when you use jsx",
+  "type": "module",
+  "bin": {
+    "vue-auto-script-jsx": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "keywords": [
+    "vite",
+    "jsx",
+    "script",
+    "plugin",
+    "vue2",
+    "vue3"
+  ],
+  "devDependencies": {
+    "vue": "^3.0.0"
+  },
+  "dependencies": {
+    "fast-glob": "^3.2.11"
+  },
+  "peerDependencies": {
+    "vite": "^2.0.0 || ^3.0.0",
+    "vue": "^2.0.0 || ^3.0.0",
+    "vue-template-compiler": ">=2.0.0 <2.7.0"
+  },
+  "peerDependenciesMeta": {
+    "vue-template-compiler": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "vite": {
+      "optional": true
+    }
+  }
+}

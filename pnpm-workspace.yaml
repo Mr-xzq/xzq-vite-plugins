@@ -1,0 +1,4 @@
+# 通过 glob 语法将 packages下的所有文件夹都当做一个package，添加到 monorepo 中进行管理。
+packages:
+  - 'packages/**'
+  - 'playground/**'

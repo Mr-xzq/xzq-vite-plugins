@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# 不允许并发执行 command(https://github.com/okonet/lint-staged#task-concurrency)
+npx lint-staged --allow-empty --concurrent false

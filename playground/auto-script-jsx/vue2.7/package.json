@@ -1,0 +1,19 @@
+{
+  "name": "test-auto-script-jsx",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vue": "~2.7.0",
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "@vitejs/plugin-vue2-jsx": "^1.0.2",
+    "@xzq/vite-plugin-vue-auto-script-jsx": "workspace:*"
+  },
+  "dependenciesMeta": {
+    "@xzq/vite-plugin-vue-auto-script-jsx": {
+      "injected": true
+    }
+  }
+}
