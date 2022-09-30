@@ -13,7 +13,7 @@ import {
   step,
   updateTemplateVersions,
   updateVersion,
-} from './releaseUtils';
+} from './releaseUtils.js';
 
 async function main() {
   let targetVersion;
