@@ -2,12 +2,19 @@
  * modified from https://github.com/vuejs/core/blob/master/scripts/release.js
  */
 import { existsSync, readdirSync, writeFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { createRequire } from 'node:module';
 import colors from 'picocolors';
 import { execa } from 'execa';
 import semver from 'semver';
 import fs from 'fs-extra';
 import minimist from 'minimist';
+
+// https://stackoverflow.com/a/62892482/15493029
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const __require = createRequire(import.meta.url);
 
 export const args = minimist(process.argv.slice(2));
 
@@ -18,7 +25,7 @@ if (isDryRun) {
   console.log();
 }
 
-export const packages = ['vite', 'create-vite', 'plugin-legacy', 'plugin-react', 'plugin-vue', 'plugin-vue-jsx'];
+export const packages = ['auto-script-jsx'];
 
 export const versionIncrements = [
   'patch',
@@ -38,7 +45,7 @@ export function getPackageInfo(pkgName) {
   }
 
   const pkgPath = path.resolve(pkgDir, 'package.json');
-  const pkg = require(pkgPath);
+  const pkg = __require(pkgPath);
   const currentVersion = pkg.version;
 
   if (pkg.private) {
@@ -181,7 +188,7 @@ export async function updateTemplateVersions() {
   const templates = readdirSync(dir).filter((dir) => dir.startsWith('template-'));
   for (const template of templates) {
     const pkgPath = path.join(dir, template, `package.json`);
-    const pkg = require(pkgPath);
+    const pkg = __require(pkgPath);
     pkg.devDependencies.vite = `^` + viteVersion;
     if (template.startsWith('template-vue')) {
       pkg.devDependencies['@vitejs/plugin-vue'] =
