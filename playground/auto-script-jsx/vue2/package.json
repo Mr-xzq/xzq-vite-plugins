@@ -12,10 +12,10 @@
     "vite-plugin-vue2": "^2.0.2",
     "@vue/composition-api": "^1.6.0",
     "vue-template-compiler": ">=2.0.0 <2.7.0",
-    "@xzq/vite-plugin-vue-auto-script-jsx": "workspace:*"
+    "plugin-auto-script-jsx": "workspace:*"
   },
   "dependenciesMeta": {
-    "@xzq/vite-plugin-vue-auto-script-jsx": {
+    "plugin-auto-script-jsx": {
       "injected": true
     }
   }

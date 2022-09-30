@@ -1,5 +1,5 @@
 {
-  "name": "@xzq/vite-plugin-vue-auto-script-jsx",
+  "name": "plugin-auto-script-jsx",
   "version": "0.0.0",
   "license": "MIT",
   "author": "xzq",
@@ -10,7 +10,8 @@
   },
   "files": [
     "bin",
-    "dist"
+    "dist",
+    "src"
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

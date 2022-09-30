@@ -25,7 +25,7 @@ if (isDryRun) {
   console.log();
 }
 
-export const packages = ['auto-script-jsx'];
+export const packages = ['plugin-auto-script-jsx'];
 
 export const versionIncrements = [
   'patch',

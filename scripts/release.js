@@ -103,7 +103,9 @@ async function main() {
     console.log(`\nDry run finished - run git diff to see package changes.`);
   } else {
     console.log(
-      colors.green('\nPushed, publishing should starts shortly on CI.\nhttps://github.com/vitejs/vite/actions/workflows/publish.yml')
+      colors.green(
+        '\nPushed, publishing should starts shortly on CI.\nhttps://github.com/Mr-xzq/xzq-vite-plugins/actions/workflows/npm-publish.yml'
+      )
     );
   }
 

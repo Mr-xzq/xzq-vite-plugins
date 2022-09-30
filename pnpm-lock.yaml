@@ -55,7 +55,7 @@ importers:
       vite-plugin-inspect: 0.6.0_vite@3.0.4
       vitest: 0.20.3
 
-  packages/auto-script-jsx:
+  packages/plugin-auto-script-jsx:
     specifiers:
       fast-glob: ^3.2.11
       vue: ^3.0.0
@@ -67,48 +67,48 @@ importers:
   playground/auto-script-jsx/vue2:
     specifiers:
       '@vue/composition-api': ^1.6.0
-      '@xzq/vite-plugin-vue-auto-script-jsx': workspace:*
+      plugin-auto-script-jsx: workspace:*
       vite-plugin-vue2: ^2.0.2
       vue: '>=2.0.0 <2.7.0'
       vue-template-compiler: '>=2.0.0 <2.7.0'
     devDependencies:
       '@vue/composition-api': 1.7.0_vue@2.6.14
-      '@xzq/vite-plugin-vue-auto-script-jsx': file:packages/auto-script-jsx_sbs6or2oam5i4s4vmfp4rzwdnq
+      plugin-auto-script-jsx: link:../../../packages/plugin-auto-script-jsx
       vite-plugin-vue2: 2.0.2_sbs6or2oam5i4s4vmfp4rzwdnq
       vue: 2.6.14
       vue-template-compiler: 2.6.14
     dependenciesMeta:
-      '@xzq/vite-plugin-vue-auto-script-jsx':
+      'plugin-auto-script-jsx':
         injected: true
 
   playground/auto-script-jsx/vue2.7:
     specifiers:
       '@vitejs/plugin-vue2': ^1.1.2
       '@vitejs/plugin-vue2-jsx': ^1.0.2
-      '@xzq/vite-plugin-vue-auto-script-jsx': workspace:*
+      plugin-auto-script-jsx: workspace:*
       vue: ~2.7.0
     devDependencies:
       '@vitejs/plugin-vue2': 1.1.2_vue@2.7.8
       '@vitejs/plugin-vue2-jsx': 1.0.2_vue@2.7.8
-      '@xzq/vite-plugin-vue-auto-script-jsx': file:packages/auto-script-jsx_vue@2.7.8
+      plugin-auto-script-jsx: link:../../../packages/plugin-auto-script-jsx
       vue: 2.7.8
     dependenciesMeta:
-      '@xzq/vite-plugin-vue-auto-script-jsx':
+      'plugin-auto-script-jsx':
         injected: true
 
   playground/auto-script-jsx/vue3:
     specifiers:
       '@vitejs/plugin-vue': ^3.0.1
       '@vitejs/plugin-vue-jsx': ^2.0.0
-      '@xzq/vite-plugin-vue-auto-script-jsx': workspace:*
+      plugin-auto-script-jsx: workspace:*
       vue: ^3.0.0
     devDependencies:
       '@vitejs/plugin-vue': 3.0.1_vue@3.2.37
       '@vitejs/plugin-vue-jsx': 2.0.0_vue@3.2.37
-      '@xzq/vite-plugin-vue-auto-script-jsx': file:packages/auto-script-jsx_vue@3.2.37
+      plugin-auto-script-jsx: link:../../../packages/plugin-auto-script-jsx
       vue: 3.2.37
     dependenciesMeta:
-      '@xzq/vite-plugin-vue-auto-script-jsx':
+      'plugin-auto-script-jsx':
         injected: true
 
 packages:
@@ -4763,74 +4763,4 @@ packages:
   /yocto-queue/0.1.0:
     resolution: { integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q== }
     engines: { node: '>=10' }
-    dev: true
-
-  file:packages/auto-script-jsx_sbs6or2oam5i4s4vmfp4rzwdnq:
-    resolution: { directory: packages/auto-script-jsx, type: directory }
-    id: file:packages/auto-script-jsx
-    name: '@xzq/vite-plugin-vue-auto-script-jsx'
-    version: 0.0.0
-    engines: { node: ^14.18.0 || >=16.0.0 }
-    hasBin: true
-    peerDependencies:
-      vite: ^2.0.0 || ^3.0.0
-      vue: ^2.0.0 || ^3.0.0
-      vue-template-compiler: '>=2.0.0 <2.7.0'
-    peerDependenciesMeta:
-      vite:
-        optional: true
-      vue:
-        optional: true
-      vue-template-compiler:
-        optional: true
-    dependencies:
-      fast-glob: 3.2.11
-      vue: 2.6.14
-      vue-template-compiler: 2.6.14
-    dev: true
-
-  file:packages/auto-script-jsx_vue@2.7.8:
-    resolution: { directory: packages/auto-script-jsx, type: directory }
-    id: file:packages/auto-script-jsx
-    name: '@xzq/vite-plugin-vue-auto-script-jsx'
-    version: 0.0.0
-    engines: { node: ^14.18.0 || >=16.0.0 }
-    hasBin: true
-    peerDependencies:
-      vite: ^2.0.0 || ^3.0.0
-      vue: ^2.0.0 || ^3.0.0
-      vue-template-compiler: '>=2.0.0 <2.7.0'
-    peerDependenciesMeta:
-      vite:
-        optional: true
-      vue:
-        optional: true
-      vue-template-compiler:
-        optional: true
-    dependencies:
-      fast-glob: 3.2.11
-      vue: 2.7.8
-    dev: true
-
-  file:packages/auto-script-jsx_vue@3.2.37:
-    resolution: { directory: packages/auto-script-jsx, type: directory }
-    id: file:packages/auto-script-jsx
-    name: '@xzq/vite-plugin-vue-auto-script-jsx'
-    version: 0.0.0
-    engines: { node: ^14.18.0 || >=16.0.0 }
-    hasBin: true
-    peerDependencies:
-      vite: ^2.0.0 || ^3.0.0
-      vue: ^2.0.0 || ^3.0.0
-      vue-template-compiler: '>=2.0.0 <2.7.0'
-    peerDependenciesMeta:
-      vite:
-        optional: true
-      vue:
-        optional: true
-      vue-template-compiler:
-        optional: true
-    dependencies:
-      fast-glob: 3.2.11
-      vue: 3.2.37
     dev: true

@@ -1,4 +1,4 @@
-# @xzq/vite-plugin-vue-auto-script-jsx
+# plugin-auto-script-jsx
 
 ## 概述
 
@@ -48,9 +48,9 @@ X [ERROR] The JSX syntax extension is not currently enabled
 ### Vite
 
 ```shell
-npm i @xzq/vite-plugin-vue-auto-script-jsx -D
+npm i plugin-auto-script-jsx -D
 
-pnpm add @xzq/vite-plugin-vue-auto-script-jsx -D
+pnpm add plugin-auto-script-jsx -D
 
 yarn add vue-lazyload -D
 ```
@@ -59,7 +59,7 @@ yarn add vue-lazyload -D
 
 ```js
 import { defineConfig } from 'vite';
-import autoScriptJsxPlugin from '@xzq/vite-plugin-vue-auto-script-jsx';
+import autoScriptJsxPlugin from 'plugin-auto-script-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -109,7 +109,7 @@ export default {
 ```js
 import { defineConfig } from 'vite';
 import { createVuePlugin as vue2 } from 'vite-plugin-vue2';
-import autoScriptJsxPlugin from '@xzq/vite-plugin-vue-auto-script-jsx';
+import autoScriptJsxPlugin from 'plugin-auto-script-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -146,7 +146,7 @@ export default defineConfig(({ command, mode }) => {
 import { defineConfig } from 'vite';
 import vue2Dot7 from '@vitejs/plugin-vue2';
 import vue2Dot7Jsx from '@vitejs/plugin-vue2-jsx';
-import autoScriptJsxPlugin from '@xzq/vite-plugin-vue-auto-script-jsx';
+import autoScriptJsxPlugin from 'plugin-auto-script-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -176,7 +176,7 @@ export default defineConfig(({ command, mode }) => {
 import { defineConfig } from 'vite';
 import vue3 from '@vitejs/plugin-vue';
 import vue3Jsx from '@vitejs/plugin-vue-jsx';
-import autoScriptJsxPlugin from '@xzq/vite-plugin-vue-auto-script-jsx';
+import autoScriptJsxPlugin from 'plugin-auto-script-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {

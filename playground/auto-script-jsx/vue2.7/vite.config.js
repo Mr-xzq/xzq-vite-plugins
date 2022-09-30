@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import inspect from 'vite-plugin-inspect';
 import vue2Dot7 from '@vitejs/plugin-vue2';
 import vue2Dot7Jsx from '@vitejs/plugin-vue2-jsx';
-import autoScriptJsxPlugin from '@xzq/vite-plugin-vue-auto-script-jsx';
+import autoScriptJsxPlugin from 'plugin-auto-script-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
