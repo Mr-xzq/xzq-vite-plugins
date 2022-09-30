@@ -10,6 +10,7 @@
     "dev": "pnpm -r --filter=./packages/* run dev",
     "format": "prettier --write --cache .",
     "release": "node scripts/release.js",
+    "ci-publish": "node scripts/publishCI.js",
     "lint:fix": "eslint --fix --cache packages/**/src/** playground/**/__tests__/**",
     "prepare": "husky install"
   },

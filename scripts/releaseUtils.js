@@ -164,6 +164,11 @@ export async function getLatestTag(pkgName) {
     .reverse()[0];
 }
 
+export async function getActiveVersion(pkgName) {
+  const npmName = pkgName === 'vite' || pkgName === 'create-vite' ? pkgName : `@vitejs/${pkgName}`;
+  return (await run('npm', ['info', npmName, 'version'], { stdio: 'pipe' })).stdout;
+}
+
 export async function logRecentCommits(pkgName) {
   const tag = await getLatestTag(pkgName);
   if (!tag) return;
