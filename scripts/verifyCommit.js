@@ -19,5 +19,5 @@ if (!releaseRE.test(msg) && !commitRE.test(msg)) {
       `    ${colors.green(`fix: handle events on blur (close #28)`)}\n\n` +
       colors.red(`  See .github/commit-convention.md for more details.\n`)
   );
-  // process.exit(1);
+  process.exit(1);
 }
