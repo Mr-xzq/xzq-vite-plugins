@@ -71,7 +71,7 @@ export default defineConfig({
 
 > 以下测试包含了 `options api` 和 `composition api` 两种风格
 
-### 相同的 vue 文件
+### 相同的 .vue 模板文件
 
 `composition api`：
 
