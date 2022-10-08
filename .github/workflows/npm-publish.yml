@@ -26,7 +26,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install deps
-        run: pnpm install
+        run: pnpm install --registry https://registry.npmmirror.com/
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
 
