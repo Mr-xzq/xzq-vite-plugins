@@ -164,9 +164,21 @@ export async function getLatestTag(pkgName) {
     .reverse()[0];
 }
 
-export async function getActiveVersion(pkgName) {
-  const npmName = pkgName === 'vite' || pkgName === 'create-vite' ? pkgName : `@vitejs/${pkgName}`;
-  return (await run('npm', ['info', npmName, 'version'], { stdio: 'pipe' })).stdout;
+export async function getActiveVersion(pkgName, currentVersion) {
+  let npmVersionInfo;
+  try {
+    npmVersionInfo = (await run('npm', ['info', pkgName, 'version'], { stdio: 'pipe' })).stdout;
+  } catch (e) {
+    const errorMsg = e.message;
+    if (errorMsg.includes('404')) {
+      // 第一次发布时, 在 npm 是没有包相关信息的
+      console.log(`getActiveVersion: Not Found ${pkgName} in npm`);
+      npmVersionInfo = currentVersion;
+    } else {
+      throw e;
+    }
+  }
+  return npmVersionInfo;
 }
 
 export async function logRecentCommits(pkgName) {

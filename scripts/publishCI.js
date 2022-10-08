@@ -8,9 +8,9 @@ async function main() {
     throw new Error('No tag specified');
   }
 
-  let pkgName = 'vite';
-  let version;
+  let pkgName, version;
 
+  // eg: plugin-auto-script-jsx@1.0.0-beta.1 --> plugin-auto-script-jsx, 1.0.0-beta.1
   if (tag.includes('@')) [pkgName, version] = tag.split('@');
   else version = tag;
 
@@ -20,7 +20,7 @@ async function main() {
   if (currentVersion !== version)
     throw new Error(`Package version from tag "${version}" mismatches with current version "${currentVersion}"`);
 
-  const activeVersion = await getActiveVersion(pkgName);
+  const activeVersion = await getActiveVersion(pkgName, currentVersion);
 
   step('Publishing package...');
   const releaseTag = version.includes('beta')
