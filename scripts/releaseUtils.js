@@ -1,7 +1,7 @@
 /**
  * modified from https://github.com/vuejs/core/blob/master/scripts/release.js
  */
-import { existsSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { createRequire } from 'node:module';
@@ -194,27 +194,4 @@ export async function logRecentCommits(pkgName) {
   );
   await run('git', ['--no-pager', 'log', `${sha}..HEAD`, '--oneline', '--', `packages/${pkgName}`], { stdio: 'inherit' });
   console.log();
-}
-
-export async function updateTemplateVersions() {
-  const viteVersion = (await fs.readJSON(path.resolve(__dirname, '../packages/vite/package.json'))).version;
-  if (/beta|alpha|rc/.test(viteVersion)) return;
-
-  const dir = path.resolve(__dirname, '../packages/create-vite');
-
-  const templates = readdirSync(dir).filter((dir) => dir.startsWith('template-'));
-  for (const template of templates) {
-    const pkgPath = path.join(dir, template, `package.json`);
-    const pkg = __require(pkgPath);
-    pkg.devDependencies.vite = `^` + viteVersion;
-    if (template.startsWith('template-vue')) {
-      pkg.devDependencies['@vitejs/plugin-vue'] =
-        `^` + (await fs.readJSON(path.resolve(__dirname, '../packages/plugin-vue/package.json'))).version;
-    }
-    if (template.startsWith('template-react')) {
-      pkg.devDependencies['@vitejs/plugin-react'] =
-        `^` + (await fs.readJSON(path.resolve(__dirname, '../packages/plugin-react/package.json'))).version;
-    }
-    writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + '\n');
-  }
 }

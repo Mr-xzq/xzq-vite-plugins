@@ -11,7 +11,6 @@ import {
   run,
   runIfNotDry,
   step,
-  updateTemplateVersions,
   updateVersion,
 } from './releaseUtils.js';
 
@@ -77,7 +76,6 @@ async function main() {
 
   step('\nUpdating package version...');
   updateVersion(pkgPath, targetVersion);
-  if (pkgName === 'create-vite') updateTemplateVersions();
 
   step('\nGenerating changelog...');
   const changelogArgs = ['conventional-changelog', '-p', 'angular', '-i', 'CHANGELOG.md', '-s', '--commit-path', '.'];
