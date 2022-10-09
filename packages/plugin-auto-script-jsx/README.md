@@ -1,5 +1,11 @@
 # plugin-auto-script-jsx
 
+<p align="center">
+  <a href="https://npmjs.com/package/plugin-auto-script-jsx"><img src="https://img.shields.io/npm/v/plugin-auto-script-jsx.svg" alt="npm package"></a>
+  <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/node/v/plugin-auto-script-jsx.svg" alt="node compatibility"></a>
+  <a href="https://github.com/Mr-xzq/xzq-vite-plugins/actions/workflows/npm-publish.yml"><img src="https://github.com/Mr-xzq/xzq-vite-plugins/actions/workflows/npm-publish.yml/badge.svg" alt="publish node package"></a>
+</p>
+
 ## 概述
 
 当你从别的构建工具 `(vue-cli, webpack...)` 等切换到 `vite`，并且你的项目中有使用到 `jsx` 时，你会发现这样的错误日志：
