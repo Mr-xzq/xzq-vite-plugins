@@ -3,7 +3,7 @@ name: Publish Package
 on:
   push:
     tags:
-      - 'plugin-*' # Push events to matching plugin-*, i.e. plugin-(vue|vue-jsx|react|legacy)@1.0.0
+      - 'plugin-*' # Push events to matching plugin-*, i.e. plugin-(auto-script-jsx|xxx)@1.0.0
 
 jobs:
   publish:
