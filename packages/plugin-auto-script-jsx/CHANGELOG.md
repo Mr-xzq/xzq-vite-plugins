@@ -1,5 +1,9 @@
 ## 1.0.0-beta.1 (2022-10-09)
 
+- chore: 优化 CHANGELOG.md 和 README.md ([3dc1bdf](https://github.com/Mr-xzq/xzq-vite-plugins/commit/3dc1bdf))
+
+## 1.0.0-beta.1 (2022-10-09)
+
 - release: plugin-auto-script-jsx@1.0.0-beta.0 ([a03dfb1](https://github.com/Mr-xzq/xzq-vite-plugins/commit/a03dfb1))
 - release: plugin-auto-script-jsx@1.0.0-beta.1 ([192f625](https://github.com/Mr-xzq/xzq-vite-plugins/commit/192f625))
 - release: plugin-auto-script-jsx@1.0.0-beta.1 ([c68dfbd](https://github.com/Mr-xzq/xzq-vite-plugins/commit/c68dfbd))
