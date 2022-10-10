@@ -1,3 +1,5 @@
+## 1.0.0-beta.2 (2022-10-10)
+
 ## 1.0.0-beta.1 (2022-10-09)
 
 - chore: 优化 CHANGELOG.md ([b26c8ac](https://github.com/Mr-xzq/xzq-vite-plugins/commit/b26c8ac))
