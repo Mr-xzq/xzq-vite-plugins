@@ -58,7 +58,7 @@ npm i plugin-auto-script-jsx -D
 
 pnpm add plugin-auto-script-jsx -D
 
-yarn add vue-lazyload -D
+yarn add plugin-auto-script-jsx -D
 ```
 
 `vite.config.js`：
